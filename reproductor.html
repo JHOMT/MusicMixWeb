@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,300&display=swap" rel="stylesheet">
+  <link rel="icon" href="Imagenes/jhomt2.png">
+  <title>Reproductor de musica</title>
+  <link rel="stylesheet" href="Style.css">
+</head>
+<body>
+  <div class="container" >
+    <div class="player">
+      <div class="player__controls">
+        <div class="player__btn player__btn--small" id="previous">
+          <a href="index.html" class="index-reproductor">
+            <span class="material-symbols-outlined">
+            west
+            </span>
+          </a>
+        </div>
+        <h5 class="player__title">Mi Música</h5>
+        <div class="player__btn player__btn--small" id="icon-menu">
+          <span class="material-symbols-outlined" id="openModalButton">
+            list
+          </span>
+        </div>
+      </div>
+      <div class="player__album">
+        <img src="Imagenes/jhomt2.png" alt="Album Cover" class="player__img" loading="lazy" />
+      </div>
+ 
+      <div class="player-iformacion">
+        <h2 class="artist"></h2>
+        <h3 class="song"></h3>
+      </div>
+      <input type="range" value="20" min="0" class="player__level" id="range" />
+      <div class="audio-duration">
+        <div class="start">00:00</div>
+        <div class="end">00:00</div>
+      </div>
+      <audio id="audio" src="" class="player__audio" controls></audio>
+      <div id="songListModal" class="modal">
+        <div class="modal-content">
+          <div id="songList"></div>
+        </div>
+      </div>
+ 
+      <div class="player__controls">
+        <div class="player__btn player__btn--medium" id="prevButton">
+          <span class="material-symbols-outlined">
+            skip_previous
+            </span>
+        </div>
+        
+
+        <div class="player__btn player__btn--medium blue play" id="playButton">
+          <span class="material-symbols-outlined play-btn" >
+            play_arrow
+            </span>
+          <span class="material-symbols-outlined pause-btn hide">
+            pause
+            </span>
+        </div>
+        <div class="player__btn player__btn--medium" id="nextButton">
+          <span class="material-symbols-outlined">
+            skip_next
+            </span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script>
+      var openModalButton = document.getElementById('openModalButton');
+      var lista_index= document.getElementById('lista_musica');
+      var songListModal = document.getElementById('songListModal');
+      window.addEventListener("message", function(event) {
+        if (event.data && event.data.type === "playSong") {
+          var songIndex = event.data.index; 
+          currentSongIndex = songIndex;
+          loadSong();
+          audioElement.play();
+        }
+      });
+      
+        openModalButton.addEventListener('click', function() {
+          songListModal.style.display = 'block';
+        });
+        window.addEventListener('click', function(event) {
+          if (event.target === songListModal) {
+            songListModal.style.display = 'none';
+          }
+        });
+        for (var i = 0; i < songs.length; i++) {
+          var song = songs[i];
+          var listItem = document.createElement('div');
+          listItem.addEventListener('click', function() {
+            var songItems = Array.from(songListElement.getElementsByClassName('song-item'));
+            songItems.forEach(function(item) {
+              item.classList.remove('active');
+            });
+            this.classList.add('active');
+            var clickedIndex = songItems.indexOf(this);
+            if (clickedIndex !== -1) {
+              currentSongIndex = clickedIndex;
+              loadSong();
+              audioElement.play();
+              songListModal.style.display = 'none';
+            }else{
+              currentSongIndex = clickedIndex;
+              loadSong();
+              audioElement.play();
+              songListModal.style.display = 'none';
+            }
+          });
+        }
+  </script>
+  <script src="main.js"></script>
+</body>
+</html>
