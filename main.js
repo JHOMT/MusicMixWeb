@@ -12,31 +12,8 @@ var cambioReproductor = document.getElementById(".index-reproductor");
 
 // Array de canciones
 var songs = [
-  'Voy a conquistar tu amor - Johnny Rivera.mp3',
-  'No queria engañarte - Victor Manuel.mp3',
-  'Me tengo que ir - Orquesta los Adolescente.mp3',
-  'Y que me pasa - Mickey Taveras.mp3',
-  'Antología Ft Agua Marina - Falso Amor ).mp3',
-  'En peligro de extincion - Orquesta BEMBE.mp3',
-  'KAROL G - Ay, DiOs Mío! (Official Video).mp3',
-  '0001 Maluma - Hawái (Official Video).mp3',
-  '0001 TUSA - COMBINACION DE LA HABANA.mp3',
-  '0002 El Alfa x Darell x Noriel.mp3',
-  'POBLADO  - J BALVIN, KAROL G, NICKY JAM, ft. Crissin.mp3',
-  '002 Tainy, J Balvin - Agua (Music From  Sponge On The Run  Movie Official Video).mp3',
-  '003 BUTTER - BTS FT MEGAN THEE STALLION.mp3',
-  '003 MUEVELO - DADDY YANKEE _ NICKY JAM.mp3',
-  '004 AQUI LLEGO TU TIBURON (SAFAERA MIX) - DJ RAULITO FT DJ BRYANFLOW.mp3',
-  '004 BAILA CONMIGO - DAYVI.mp3',
-  '004 ENSEÑAME A SOÑAR - ALETEO GUARACHA.mp3',
-  '004 HOLA (REMIX) - DALEX FT LENNY TAVAREZ, CHENCHO CORLEONE Y JUHN.mp3',
-  '004 MIX ELSA - EL GRUPO 5.mp3',
-  '004 PEPAS - FARRUKO.mp3',
-  '004 QUE TIRE PA LANTE - DADDY YANKEE.mp3',
-  '005 ESTOY SOLTERA - LESLIE SHAW FT THALIA Y FARINA.mp3',
-  '005 FUE TAN FACIL - K_LLAO SALSA.mp3',
-  '005 QUERERTE A TI - WILLIE GONZALES.mp3',
-  '005 SOBRIO - MALUMA.mp3',
+  "001 IN DA GETTO - J BALVIN, SKRILLEX.mp3",
+  "0001 Maluma - Hawái (Official Video).mp3"
 ];
 
 function loadSong(){
