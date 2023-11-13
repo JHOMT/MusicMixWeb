@@ -1,0 +1,227 @@
+:root {
+    --background: #e0e5ec;
+    --gray: #797d7f;
+  }
+  
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Raleway", sans-serif;
+}
+
+img {
+  max-width: 100%;
+}
+
+.container {
+  background-color: var(--background);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+#songList{
+    text-decoration: none;
+    list-style: none;
+    margin-left: 4%;
+    margin-bottom: 1%;
+}
+#songList li {
+    border-bottom: 1px solid #949191; /* Cambia el color según tus preferencias */
+    padding-bottom: 5px; /* Ajusta el espaciado inferior según tus necesidades */
+    margin-bottom: 5px; /* Ajusta el margen inferior según tus necesidades */
+}
+
+.player {
+  width: 900px;
+  height: 1700px;
+  background-color: var(--background);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  border-radius: 24px;
+  box-shadow: 9px 9px 16px rgba(163, 177, 198, 0.6),
+    -9px -9px 16px rgba(255, 255, 255, 0.5);
+}
+
+.player__controls {
+  display: flex;
+  width: 95%;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+.player__btn {
+  cursor: pointer;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: -8px -8px 20px 0px #fff9, -6px -6px 6px 0px #fff9,
+    8px 8px 20px #0001, 5px 5px 6px 0px #0001;
+  color: var(--gray);
+  width: 200px;
+  height: 200px;
+}
+.player__btn span{
+    font-size: 100px;
+}
+.player__btn:active {
+  box-shadow: inset -8px -8px 20px #fff9, inset -5px -5px 6px #fff9,
+    inset 8px 8px 20px #0003, inset 5px 5px 6px #0001;
+}
+
+.player__btn--small {
+  min-width: 50px;
+  min-height: 50px;
+}
+.player__title {
+  font-weight: 600;
+  font-size: 3rem;
+  color: #a1a1a1;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin: 0;
+}
+
+.player__album {
+  position: relative;
+  width: 400px;
+  height: 400px;
+}
+.player-iformacion{
+  margin-top: 2rem;
+  height: 20%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 60px;
+}
+.player__img {
+  margin-top: 0rem;
+  height: 100%;
+  width: auto;
+  content: "";
+  top: -5px;
+  bottom: -5px;
+  left: -5px;
+  right: -5px;
+  z-index: -1;
+  filter: drop-shadow(9px 9px 16px rgba(14, 14, 15, 0.6)) drop-shadow(-9px -9px 16px rgba(255, 255, 255, 0.5));
+}
+
+.player__artist {
+  font-size: 1.2em;
+  font-weight: 500;
+  opacity: 0.5;
+  margin: 20px 0px 0px 0px;
+}
+
+.player__song {
+  position: relative;
+  width: 100%;
+  text-align: center;
+  font-weight: 400;
+  font-size: 1em;
+  opacity: 0.5;
+  margin: 0;
+}
+
+.player__level {
+  width: 80%;
+  -webkit-apearance: none;
+  outline: none;
+  border: none;
+  padding: 0;
+  margin-top: 40px;
+}
+
+.player__level::-webkit-slider-runnable-track {
+  background-color: #d7dbdd;
+  height: 6px;
+  border-radius: 3px;
+}
+
+.player__level::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  border-radius: 100%;
+  background-color: #5c87fe;
+  height: 18px;
+  width: 18px;
+  margin-top: -7px;
+}
+
+.audio-duration {
+  display: flex;
+  width: 78%;
+  font-size: 10px;
+  font-weight: 600;
+  color: #a1a1a1;
+  letter-spacing: 1px;
+}
+
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 48
+}
+
+.start {
+  flex: 1;
+  font-size: 30px;
+  margin-bottom: 2rem
+}
+.end{
+    font-size: 30px;
+}
+
+.player__audio {
+  visibility: hidden;
+}
+
+.player__btn--medium {
+  min-height: 70px;
+  min-width: 70px;
+}
+
+.blue {
+  background-color: #5c87fe;
+  color: #fff;
+}
+.hide {
+  display: none;
+}
+
+
+.modal {
+    font-size: 60px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  position: fixed;
+  z-index: 9999;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  overflow-y: auto; 
+}
+input[type="range"] {
+    height: 100px; /* Establece el grosor deseado */
+    width: 90%; /* Opcional: Ajusta el ancho según tus necesidades */
+    display: block; /* Hace que el elemento sea un bloque para que el ancho funcione correctamente */
+}

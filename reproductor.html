@@ -7,8 +7,11 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,300&display=swap" rel="stylesheet">
   <link rel="icon" href="Imagenes/jhomt2.png">
+  <link rel="stylesheet" href="reproductor.css">
   <title>Reproductor de musica</title>
-  <link rel="stylesheet" href="Style.css">
+  <style>
+
+  </style>
 </head>
 <body>
   <div class="container" >
@@ -36,11 +39,12 @@
         <h2 class="artist"></h2>
         <h3 class="song"></h3>
       </div>
-      <input type="range" value="20" min="0" class="player__level" id="range" />
+      
       <div class="audio-duration">
         <div class="start">00:00</div>
         <div class="end">00:00</div>
       </div>
+      <input type="range" value="20" min="0" class="player__level" id="range" />
       <audio id="audio" src="" class="player__audio" controls></audio>
       <div id="songListModal" class="modal">
         <div class="modal-content">
