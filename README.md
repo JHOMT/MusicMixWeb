@@ -26,13 +26,13 @@ Esta aplicación web de música te permite explorar y reproducir canciones almac
 3. Actualiza el array de canciones con la información de la nueva canción.
 4. Guarda los cambios y vuelve a cargar la aplicación.
 
-javascript
-// Ejemplo del array de canciones en script.js
+-javascript
+'// Ejemplo del array de canciones en script.js
 // Array de canciones
 var songs = [
   "001 IN DA GETTO - J BALVIN, SKRILLEX.mp3",
   "0001 Maluma - Hawái (Official Video).mp3"
-];
+];'
 ## Cómo Contribuir
 
 Si deseas contribuir a este proyecto, sigue estos pasos:
